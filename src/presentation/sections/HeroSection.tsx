@@ -16,13 +16,6 @@ export const HeroSection = () => (
       <Link className="button" style={{ background: 'white', color: '#312e81' }} href="/courses">
         Explorer les cours
       </Link>
-      <Link
-        className="button"
-        style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.4)' }}
-        href="/api/progress"
-      >
-        API Progression
-      </Link>
     </div>
   </section>
 );

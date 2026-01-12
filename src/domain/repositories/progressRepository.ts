@@ -5,3 +5,4 @@ export interface ProgressRepository {
   getProgressForCourse(userId: string, courseId: string): Promise<ProgressSnapshot | null>;
   updateProgressSnapshot(snapshot: ProgressSnapshot): Promise<ProgressSnapshot>;
 }
+  

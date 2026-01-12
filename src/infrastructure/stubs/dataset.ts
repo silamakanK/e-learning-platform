@@ -1,9 +1,5 @@
-import type {
-  Chapter,
-  CourseDetail,
-  ProgressSnapshot,
-  Quiz
-} from '@/domain/entities/course';
+import type { Chapter, CourseDetail, ProgressSnapshot, Quiz } from '@/domain/entities/course';
+import type { Certificate } from '@/domain/entities/certificate';
 
 export const chapters: Chapter[] = [
   {
@@ -118,5 +114,24 @@ export const demoProgress: ProgressSnapshot[] = [
     averageScore: 76,
     badges: ['AI Explorer'],
     lastAccessedAt: new Date().toISOString()
+  }
+];
+
+export const demoCertificates: Certificate[] = [
+  {
+    id: 'cert-ux',
+    userId: 'demo-user',
+    courseId: 'learning-experience-design',
+    courseTitle: 'Learning Experience Design',
+    issuedAt: new Date().toISOString(),
+    credentialUrl: 'https://example.com/certificates/cert-ux',
+    status: 'issued'
+  },
+  {
+    id: 'cert-ai',
+    userId: 'demo-user',
+    courseId: 'ai-coach',
+    courseTitle: 'IA Coach pour enseignants',
+    status: 'in_progress'
   }
 ];

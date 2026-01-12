@@ -1,22 +1,23 @@
 const features = [
   {
-    title: 'Couche Présentation',
+    title: 'Expérience immersive',
     description:
-      'Next.js (App Router) expose des pages React Server Components, controllers API et interactions UI orientées lecture.'
+      'Dashboard Next.js App Router optimisé pour la lecture : chapitres, quiz, certificats et statistiques servies en React Server Components.'
   },
   {
-    title: 'Couche Métier',
+    title: 'Logique pédagogique centralisée',
     description:
-      'Services TypeScript orchestrent les cas usages (cours, quiz, progression) et restent testables indépendamment de Next.'
+      'Services métiers (cours, progression, badges, certificats) orchestrent les règles d’achèvement et les parcours adaptatifs.'
   },
   {
-    title: 'Couche Infrastructure',
+    title: 'Données maîtrisées',
     description:
-      'Repositories Supabase et adaptateurs (in-memory en dev) pilotent les accès aux tables et RPC.'
+      'Repositories Supabase encapsulent PostgreSQL + Storage pour stocker cours, tentatives de quiz et snapshots de progression.'
   },
   {
-    title: 'Supabase Ready',
-    description: 'Un client unique sécurisé côté serveur, des procédures stockées pour les quiz et un cache local pour la lecture.'
+    title: 'Performance e-learning',
+    description:
+      'Procédures Supabase pour corriger les quiz, cache mémoire pour les parcours populaires et endpoints REST dédiés à la progression.'
   }
 ];
 
