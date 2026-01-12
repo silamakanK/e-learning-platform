@@ -1,36 +1,52 @@
 # E-learning Platform
 
-## 🎯 Objectif du projet
-Ce projet est une plateforme **E-learning** permettant aux utilisateurs de suivre des cours en ligne organisés par chapitres, avec des vidéos, des quiz et un suivi de progression.
+## 1. Contexte & Objectifs
 
-L’objectif principal est de mettre en place une **architecture claire et maintenable** basée sur Next.js et Supabase, en appliquant les bonnes pratiques d’architecture logicielle.
+Ce projet consiste à développer une **plateforme de e-learning** permettant aux utilisateurs de suivre des cours en ligne organisés par chapitres.
+
+Le système répond aux besoins suivants :
+- Consultation de contenus pédagogiques (cours, vidéos, ressources)
+- Quiz interactifs pour valider les connaissances
+- Suivi de la progression des apprenants
+
+L’objectif principal est de concevoir une application avec une **architecture claire, maintenable et évolutive**, en appliquant les bonnes pratiques d’architecture logicielle.
 
 ---
 
-## 🧱 Stack technique
-- **Next.js** (Frontend + API Routes)
+## 2. Architecture choisie
+
+L’application repose sur une **architecture 3-tiers**, inspirée des principes de la Clean Architecture :
+
+- **Présentation** : interface utilisateur et API (Next.js)
+- **Logique métier** : services, règles métier et cas d’usage
+- **Données** : persistance et services techniques
+
+### Choix technologiques
+- **Next.js** : frontend + backend (API Routes)
 - **Supabase** :
-  - PostgreSQL (base de données)
-  - Authentification
-  - Storage (ressources et médias)
+  - PostgreSQL pour la base de données
+  - Auth pour l’authentification
+  - Storage pour les fichiers et ressources
+
+Ces choix garantissent une solution moderne, scalable et adaptée à un projet e-learning.
 
 ---
 
-## 🚀 Installation
+## 3. Démarrage (dev)
 
-### 1. Cloner le dépôt
+### Prérequis
+- Node.js (version LTS)
+- npm
+- Un projet Supabase configuré
+
+### Installation
 ```bash
-git clone <URL_DU_REPO_GITHUB>
-cd <NOM_DU_PROJET>
-```
-
-### 2. Installer les dépendances
-
-```bash
+git clone https://github.com/silamakanK/e-learning-platform
+cd e-learning-platform
 npm install
-```
+````
 
-### 3. Configuration
+### Configuration
 
 Créer un fichier `.env.local` :
 
@@ -39,19 +55,34 @@ NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-### 4. Lancer le projet
+### Lancement
 
 ```bash
 npm run dev
 ```
 
-➡️ Application accessible sur `http://localhost:3000`
+➡️ Application disponible sur `http://localhost:3000`
 
 ---
 
-## 📄 Livrables
+## 4. Tests
 
-* Code source
-* Diagramme UML
-* ADR (Architecture Decision Records)
-* Documentation d’architecture
+Le projet est structuré pour permettre l’ajout de **tests unitaires** et de **tests d’intégration** sur la logique métier et les services.
+
+```bash
+npm run test
+```
+
+(Les tests ne sont pas obligatoirement exhaustifs, l’accent étant mis sur l’architecture.)
+
+---
+
+## 5. Décisions clés
+
+Les décisions architecturales majeures du projet sont documentées à l’aide d’**ADR (Architecture Decision Records)**, notamment :
+
+* Choix de la stack Next.js + Supabase
+* Adoption d’une architecture 3-tiers
+* Séparation claire des responsabilités
+
+Les ADR permettent de justifier les choix techniques et de faciliter l’évolution du projet.
